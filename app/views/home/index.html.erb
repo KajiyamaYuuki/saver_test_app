@@ -1,2 +1,7 @@
-<h1>Home#index</h1>
+<% if current_user.try(:is_admin?) %>
+  <h1>Home#index_admin</h1>
+<% else %>
+  <h1>Home#index</h1>
+<% end %>
+
 <p>Find me in app/views/home/index.html.erb</p>
